@@ -18,6 +18,7 @@
 		B9D9DCB81ED7B872005AA010 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9DCB11ED7B872005AA010 /* GFGeoHash.m */; };
 		B9D9DCB91ED7B872005AA010 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9DCB31ED7B872005AA010 /* GFGeoHashQuery.m */; };
 		B9D9DCBA1ED7B872005AA010 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9DCB51ED7B872005AA010 /* GFQuery.m */; };
+		B9D9DCC21ED7CA5A005AA010 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9DCC11ED7CA5A005AA010 /* PokeAnnotation.swift */; };
 		C0B69F7E59C2F46D948E924D /* Pods_PokeSearchhh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067322D15261BDD4A13677E8 /* Pods_PokeSearchhh.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		B9D9DCB41ED7B872005AA010 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		B9D9DCB51ED7B872005AA010 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		B9D9DCBE1ED7B981005AA010 /* PokeSearchhh-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PokeSearchhh-Bridging-Header.h"; sourceTree = "<group>"; };
+		B9D9DCC11ED7CA5A005AA010 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		C018D8DDAB359B81B41E22A9 /* Pods-PokeSearchhh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSearchhh.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSearchhh/Pods-PokeSearchhh.release.xcconfig"; sourceTree = "<group>"; };
 		CCD7C668B31C42893C4D8FF8 /* Pods-PokeSearchhh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSearchhh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSearchhh/Pods-PokeSearchhh.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,15 +103,16 @@
 		B98CAF781ED7B41D00F07994 /* PokeSearchhh */ = {
 			isa = PBXGroup;
 			children = (
+				B9D9DCC01ED7C9EF005AA010 /* Model */,
+				B9D9DCBF1ED7C9EB005AA010 /* Controller */,
 				B9D9DCA41ED7B872005AA010 /* GeoFire */,
-				B98CAF8B1ED7B44200F07994 /* GoogleService-Info.plist */,
-				B98CAF791ED7B41D00F07994 /* AppDelegate.swift */,
-				B98CAF7B1ED7B41D00F07994 /* ViewController.swift */,
-				B98CAF7D1ED7B41D00F07994 /* Main.storyboard */,
-				B98CAF801ED7B41D00F07994 /* Assets.xcassets */,
-				B98CAF821ED7B41D00F07994 /* LaunchScreen.storyboard */,
-				B98CAF851ED7B41D00F07994 /* Info.plist */,
 				B9D9DCBE1ED7B981005AA010 /* PokeSearchhh-Bridging-Header.h */,
+				B98CAF791ED7B41D00F07994 /* AppDelegate.swift */,
+				B98CAF7D1ED7B41D00F07994 /* Main.storyboard */,
+				B98CAF821ED7B41D00F07994 /* LaunchScreen.storyboard */,
+				B98CAF801ED7B41D00F07994 /* Assets.xcassets */,
+				B98CAF8B1ED7B44200F07994 /* GoogleService-Info.plist */,
+				B98CAF851ED7B41D00F07994 /* Info.plist */,
 			);
 			path = PokeSearchhh;
 			sourceTree = "<group>";
@@ -150,6 +153,22 @@
 				B9D9DCB51ED7B872005AA010 /* GFQuery.m */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		B9D9DCBF1ED7C9EB005AA010 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B98CAF7B1ED7B41D00F07994 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B9D9DCC01ED7C9EF005AA010 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9D9DCC11ED7CA5A005AA010 /* PokeAnnotation.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D9DCB71ED7B872005AA010 /* GFBase32Utils.m in Sources */,
+				B9D9DCC21ED7CA5A005AA010 /* PokeAnnotation.swift in Sources */,
 				B98CAF7C1ED7B41D00F07994 /* ViewController.swift in Sources */,
 				B9D9DCB81ED7B872005AA010 /* GFGeoHash.m in Sources */,
 				B98CAF7A1ED7B41D00F07994 /* AppDelegate.swift in Sources */,

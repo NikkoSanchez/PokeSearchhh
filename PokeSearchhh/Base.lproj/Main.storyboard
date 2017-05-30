@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,24 +25,38 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-es-7jT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEu-1P-2Ny">
-                                <rect key="frame" x="16" y="629" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEu-1P-2Ny">
+                                <rect key="frame" x="16" y="602" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="MmH-vY-OZO"/>
+                                    <constraint firstAttribute="height" constant="55" id="XQY-Ux-oxY"/>
+                                </constraints>
+                                <state key="normal" image="pokeball"/>
+                                <connections>
+                                    <action selector="spotRandomPokemon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKv-Br-TAU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="7f7-es-7jT" secondAttribute="trailing" id="P1x-Tn-lnS"/>
                             <constraint firstItem="7f7-es-7jT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TBA-CB-LDa"/>
+                            <constraint firstItem="KEu-1P-2Ny" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TWK-os-jQC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KEu-1P-2Ny" secondAttribute="bottom" constant="10" id="ZXr-RM-vNZ"/>
                             <constraint firstItem="7f7-es-7jT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oVh-rW-vDz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7f7-es-7jT" secondAttribute="bottom" id="qfT-Qb-o91"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="7f7-es-7jT" id="rw4-2h-ZGM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pokeball" width="97" height="96"/>
+    </resources>
 </document>
